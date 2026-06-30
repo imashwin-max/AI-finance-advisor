@@ -1,0 +1,18 @@
+import api from "./api";
+
+async function downloadBlob(url: string, filename: string) {
+  const response = await api.get(url, { responseType: "blob" });
+  const blobUrl = window.URL.createObjectURL(new Blob([response.data]));
+  const link = document.createElement("a");
+  link.href = blobUrl;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  window.URL.revokeObjectURL(blobUrl);
+}
+
+export const exportService = {
+  downloadCsv: () => downloadBlob("/export/csv", `transactions_${Date.now()}.csv`),
+  downloadPdf: () => downloadBlob("/export/pdf", `financial_report_${Date.now()}.pdf`),
+};

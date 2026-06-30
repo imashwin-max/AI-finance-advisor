@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* Dark theme (default) */
+.dark {
+  --color-background: 11 13 18;       /* #0b0d12 */
+  --color-surface: 19 22 29;          /* #13161d */
+  --color-surface-hover: 25 29 39;    /* #191d27 */
+  --color-border: 34 38 47;           /* #22262f */
+  --color-foreground: 245 246 248;    /* near-white */
+  --color-muted: 138 143 156;         /* #8a8f9c */
+  --color-primary: 124 92 255;        /* #7c5cff */
+  --color-primary-hover: 107 72 255;  /* #6b48ff */
+  --color-accent: 34 211 238;         /* #22d3ee */
+  --color-income: 52 211 153;         /* #34d399 */
+  --color-expense: 248 113 113;       /* #f87171 */
+}
+
+/* Light theme — this is the palette that previously didn't exist at all,
+   which is why toggling "light" mode visually did nothing. */
+.light {
+  --color-background: 247 248 250;    /* #f7f8fa */
+  --color-surface: 255 255 255;       /* #ffffff */
+  --color-surface-hover: 241 243 246; /* #f1f3f6 */
+  --color-border: 226 229 235;        /* #e2e5eb */
+  --color-foreground: 17 20 26;       /* near-black */
+  --color-muted: 100 108 120;         /* slate gray */
+  --color-primary: 109 76 247;        /* slightly deeper purple for contrast on white */
+  --color-primary-hover: 91 58 235;
+  --color-accent: 8 145 178;          /* darker cyan for AA contrast on white */
+  --color-income: 5 150 105;
+  --color-expense: 220 38 38;
+}
+
+body {
+  @apply bg-background text-foreground antialiased font-sans;
+  font-feature-settings: "cv11", "ss01";
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { @apply bg-surfaceHover rounded-full; }
+::-webkit-scrollbar-track { @apply bg-transparent; }
+
+/* Smooth theme transitions instead of an abrupt flash when toggling */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
