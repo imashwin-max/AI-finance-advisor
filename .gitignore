@@ -20,3 +20,5 @@ frontend/*.log
 .vscode/
 .idea/
 *.swp
+backend/*.pdf
+backend/transactions.csv
