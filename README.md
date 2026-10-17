@@ -1,5 +1,14 @@
 # AI Finance Advisor
 
+[![Live Application](https://img.shields.io/badge/Frontend-Vercel%20Live-black?style=for-the-badge&logo=vercel)](https://ai-finance-advisor-jet.vercel.app/)
+[![API Status](https://img.shields.io/badge/Backend-Render%20Live-46E3B7?style=for-the-badge&logo=render)](https://ai-finance-advisor-z5np.onrender.com)
+[![API Docs](https://img.shields.io/badge/Swagger-API%20Docs-85EA2D?style=for-the-badge&logo=swagger)](https://ai-finance-advisor-z5np.onrender.com/docs)
+
+### 🚀 Live Deployment
+- **Frontend (Web App):** [https://ai-finance-advisor-jet.vercel.app](https://ai-finance-advisor-jet.vercel.app/)
+- **Backend (FastAPI):** [https://ai-finance-advisor-z5np.onrender.com](https://ai-finance-advisor-z5np.onrender.com)
+- **API Documentation:** [https://ai-finance-advisor-z5np.onrender.com/docs](https://ai-finance-advisor-z5np.onrender.com/docs)
+
 A full-stack AI-powered personal finance dashboard. Upload a bank statement CSV (or register
 and get auto-generated demo data), see categorized spending analytics, track budgets, view a
 financial health score, and chat with an AI advisor grounded in your real transaction data.
@@ -130,13 +139,13 @@ transaction data — the chat feature never errors out, it just answers with les
 
 ## Deployment
 
-**Backend:** Render or Railway (`backend/render.yaml`, `backend/Procfile`)
-**Frontend:** Vercel (`frontend/vercel.json`)
+- **Frontend:** Deployed on Vercel at [https://ai-finance-advisor-jet.vercel.app](https://ai-finance-advisor-jet.vercel.app/)
+  - Configuration: `frontend/vercel.json` provides client-side SPA routing rewrites.
+- **Backend:** Deployed on Render at [https://ai-finance-advisor-z5np.onrender.com](https://ai-finance-advisor-z5np.onrender.com)
+  - Configuration: `render.yaml` & `backend/Procfile` run FastAPI with Uvicorn.
+  - Interactive Swagger Docs: [https://ai-finance-advisor-z5np.onrender.com/docs](https://ai-finance-advisor-z5np.onrender.com/docs)
 
-Set `CORS_ORIGINS` on the backend to your deployed frontend URL, and `VITE_API_BASE_URL` on the
-frontend to your deployed backend URL. SQLite on free-tier hosting is ephemeral; for a persistent
-deployment switch `DATABASE_URL` to a PostgreSQL connection string — no other code changes needed,
-since the ORM layer abstracts the database.
+`CORS_ORIGINS` automatically permits your Vercel deployment, and the frontend automatically targets the Render API in production. SQLite on free-tier hosting is ephemeral; for a persistent deployment switch `DATABASE_URL` to a PostgreSQL connection string — no other code changes needed, since SQLAlchemy abstracts the database.
 
 ## Pushing to GitHub
 
