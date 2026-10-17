@@ -34,26 +34,26 @@ export function FilterBar({ onApply }: { onApply: (filters: TransactionFilters) 
           onChange={(e) => setKeyword(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && apply()}
           placeholder="Search merchant, description, amount…"
-          className="flex-1 bg-transparent text-sm text-white outline-none placeholder:text-muted"
+          className="flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted"
         />
       </div>
 
-      <select value={category} onChange={(e) => setCategory(e.target.value)} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-white outline-none">
+      <select value={category} onChange={(e) => setCategory(e.target.value)} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-foreground outline-none">
         <option value="">All Categories</option>
         {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
       </select>
 
-      <select value={type} onChange={(e) => setType(e.target.value as "" | "income" | "expense")} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-white outline-none">
+      <select value={type} onChange={(e) => setType(e.target.value as "" | "income" | "expense")} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-foreground outline-none">
         <option value="">All Types</option>
         <option value="income">Income</option>
         <option value="expense">Expense</option>
       </select>
 
-      <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-white outline-none" />
-      <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-white outline-none" />
+      <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-foreground outline-none" />
+      <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-foreground outline-none" />
 
       <button onClick={apply} className="rounded-xl bg-gradient-primary px-4 py-2 text-sm font-medium text-white">Apply</button>
-      <button onClick={clear} className="flex items-center gap-1 rounded-xl border border-border px-3 py-2 text-sm text-muted hover:text-white">
+      <button onClick={clear} className="flex items-center gap-1 rounded-xl border border-border px-3 py-2 text-sm text-muted hover:text-foreground">
         <X className="h-3.5 w-3.5" /> Clear
       </button>
     </div>

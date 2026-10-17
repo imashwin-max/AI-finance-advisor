@@ -25,7 +25,7 @@ export function ChatInput({ onSend, disabled }: { onSend: (text: string) => void
         onKeyDown={handleKeyDown}
         placeholder="Ask about your spending, budgets, or savings…"
         rows={1}
-        className="flex-1 resize-none bg-transparent text-sm text-white outline-none placeholder:text-muted max-h-32"
+        className="flex-1 resize-none bg-transparent text-sm text-foreground outline-none placeholder:text-muted max-h-32"
       />
       <button
         onClick={submit}

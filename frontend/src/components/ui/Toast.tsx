@@ -37,7 +37,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
                 className="flex items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3 shadow-soft min-w-[260px]"
               >
                 <Icon className={`h-5 w-5 ${color}`} />
-                <span className="text-sm text-white/90 flex-1">{t.message}</span>
+                <span className="text-sm text-foreground flex-1">{t.message}</span>
                 <button onClick={() => setToasts((prev) => prev.filter((x) => x.id !== t.id))}>
                   <X className="h-4 w-4 text-muted" />
                 </button>

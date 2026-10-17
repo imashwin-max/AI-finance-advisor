@@ -25,7 +25,7 @@ export function ExportButtons() {
       <button
         onClick={() => handleExport("csv")}
         disabled={loadingType !== null}
-        className="flex items-center gap-2 rounded-xl border border-border bg-surface px-3.5 py-2 text-sm text-white/80 hover:border-primary/50 hover:text-white transition-colors disabled:opacity-50"
+        className="flex items-center gap-2 rounded-xl border border-border bg-surface px-3.5 py-2 text-sm text-foreground/80 hover:border-primary/50 hover:text-foreground transition-colors disabled:opacity-50"
       >
         {loadingType === "csv" ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileDown className="h-4 w-4" />}
         Export CSV
@@ -33,7 +33,7 @@ export function ExportButtons() {
       <button
         onClick={() => handleExport("pdf")}
         disabled={loadingType !== null}
-        className="flex items-center gap-2 rounded-xl border border-border bg-surface px-3.5 py-2 text-sm text-white/80 hover:border-primary/50 hover:text-white transition-colors disabled:opacity-50"
+        className="flex items-center gap-2 rounded-xl border border-border bg-surface px-3.5 py-2 text-sm text-foreground/80 hover:border-primary/50 hover:text-foreground transition-colors disabled:opacity-50"
       >
         {loadingType === "pdf" ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileText className="h-4 w-4" />}
         Export PDF

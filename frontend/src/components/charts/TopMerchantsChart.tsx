@@ -11,11 +11,18 @@ export function TopMerchantsChart({ data }: { data: MerchantSpend[] }) {
   return (
     <ResponsiveContainer width="100%" height={Math.max(220, data.length * 36)}>
       <BarChart data={data} layout="vertical" margin={{ left: 16 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#22262f" horizontal={false} />
-        <XAxis type="number" stroke="#8a8f9c" fontSize={11} tickLine={false} axisLine={false} tickFormatter={(v) => `₹${v / 1000}k`} />
-        <YAxis dataKey="merchant" type="category" stroke="#8a8f9c" fontSize={12} tickLine={false} axisLine={false} width={110} />
+        <CartesianGrid strokeDasharray="3 3" stroke="rgb(var(--color-border))" horizontal={false} />
+        <XAxis type="number" stroke="rgb(var(--color-muted))" fontSize={11} tickLine={false} axisLine={false} tickFormatter={(v) => `₹${v / 1000}k`} />
+        <YAxis dataKey="merchant" type="category" stroke="rgb(var(--color-foreground))" fontSize={12} tickLine={false} axisLine={false} width={110} />
         <Tooltip
-          contentStyle={{ background: "#13161d", border: "1px solid #22262f", borderRadius: 12 }}
+          contentStyle={{
+            backgroundColor: "rgb(var(--color-surface))",
+            borderColor: "rgb(var(--color-border))",
+            borderRadius: 12,
+            boxShadow: "0 8px 30px rgba(0, 0, 0, 0.12)",
+          }}
+          itemStyle={{ color: "rgb(var(--color-foreground))" }}
+          labelStyle={{ color: "rgb(var(--color-foreground))", fontWeight: 600 }}
           formatter={(value: number) => formatCurrency(value)}
         />
         <Bar dataKey="total" fill="#22d3ee" radius={[0, 6, 6, 0]} animationDuration={700} />

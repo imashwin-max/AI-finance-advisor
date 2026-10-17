@@ -52,7 +52,7 @@ export function Register() {
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-primary shadow-glow">
             <Sparkles className="h-6 w-6 text-white" />
           </div>
-          <h1 className="text-xl font-semibold text-white">Create your account</h1>
+          <h1 className="text-xl font-semibold text-foreground">Create your account</h1>
           <p className="text-sm text-muted">Start tracking and chatting with your AI finance advisor</p>
         </div>
 

@@ -48,7 +48,7 @@ export function Login() {
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-primary shadow-glow">
             <Sparkles className="h-6 w-6 text-white" />
           </div>
-          <h1 className="text-xl font-semibold text-white">Welcome back</h1>
+          <h1 className="text-xl font-semibold text-foreground">Welcome back</h1>
           <p className="text-sm text-muted">Sign in to your AI Finance Advisor account</p>
         </div>
 

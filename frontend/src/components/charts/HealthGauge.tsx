@@ -13,7 +13,7 @@ export function HealthGauge({ score, level }: HealthGaugeProps) {
   return (
     <div className="flex flex-col items-center justify-center">
       <svg width="200" height="200" viewBox="0 0 200 200">
-        <circle cx="100" cy="100" r={radius} fill="none" stroke="#22262f" strokeWidth="14" />
+        <circle cx="100" cy="100" r={radius} fill="none" stroke="rgb(var(--color-border))" strokeWidth="14" />
         <circle
           cx="100"
           cy="100"
@@ -27,8 +27,8 @@ export function HealthGauge({ score, level }: HealthGaugeProps) {
           transform="rotate(-90 100 100)"
           style={{ transition: "stroke-dashoffset 1s ease-out" }}
         />
-        <text x="100" y="95" textAnchor="middle" fontSize="36" fontWeight="700" fill="white">{score}</text>
-        <text x="100" y="120" textAnchor="middle" fontSize="13" fill="#8a8f9c">/ 100</text>
+        <text x="100" y="95" textAnchor="middle" fontSize="36" fontWeight="700" fill="rgb(var(--color-foreground))">{score}</text>
+        <text x="100" y="120" textAnchor="middle" fontSize="13" fill="rgb(var(--color-muted))">/ 100</text>
       </svg>
       <span className="mt-2 text-sm font-medium" style={{ color }}>{level}</span>
     </div>

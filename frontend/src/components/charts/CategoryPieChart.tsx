@@ -33,10 +33,17 @@ export function CategoryPieChart({ data }: { data: CategoryBreakdown[] }) {
           ))}
         </Pie>
         <Tooltip
-          contentStyle={{ background: "#13161d", border: "1px solid #22262f", borderRadius: 12 }}
+          contentStyle={{
+            backgroundColor: "rgb(var(--color-surface))",
+            borderColor: "rgb(var(--color-border))",
+            borderRadius: 12,
+            boxShadow: "0 8px 30px rgba(0, 0, 0, 0.12)",
+          }}
+          itemStyle={{ color: "rgb(var(--color-foreground))" }}
+          labelStyle={{ color: "rgb(var(--color-foreground))", fontWeight: 600 }}
           formatter={(value: number) => formatCurrency(value)}
         />
-        <Legend wrapperStyle={{ fontSize: 12, color: "#8a8f9c" }} />
+        <Legend wrapperStyle={{ fontSize: 12, color: "rgb(var(--color-muted))" }} />
       </PieChart>
     </ResponsiveContainer>
   );

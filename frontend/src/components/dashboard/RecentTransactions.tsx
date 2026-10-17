@@ -26,7 +26,7 @@ export function RecentTransactions({ transactions }: { transactions: Transaction
                 )}
               </div>
               <div>
-                <p className="text-sm font-medium text-white">{t.merchant || t.description}</p>
+                <p className="text-sm font-medium text-foreground">{t.merchant || t.description}</p>
                 <p className="text-xs text-muted">{t.category} · {formatDate(t.date)}</p>
               </div>
             </div>

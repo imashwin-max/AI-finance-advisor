@@ -68,7 +68,7 @@ export function Dropzone({ onUploadComplete }: { onUploadComplete: () => void })
         <>
           <UploadCloud className="h-10 w-10 text-primary" />
           <div>
-            <p className="font-medium text-white">Drag & drop your bank statement CSV</p>
+            <p className="font-medium text-foreground">Drag & drop your bank statement CSV</p>
             <p className="text-sm text-muted">or click to browse files</p>
           </div>
         </>

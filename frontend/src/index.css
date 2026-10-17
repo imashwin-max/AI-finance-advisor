@@ -8,31 +8,32 @@
 .dark {
   --color-background: 11 13 18;       /* #0b0d12 */
   --color-surface: 19 22 29;          /* #13161d */
-  --color-surface-hover: 25 29 39;    /* #191d27 */
-  --color-border: 34 38 47;           /* #22262f */
-  --color-foreground: 245 246 248;    /* near-white */
-  --color-muted: 138 143 156;         /* #8a8f9c */
+  --color-surface-hover: 28 33 44;    /* #1c212c */
+  --color-border: 41 47 61;           /* #292f3d */
+  --color-foreground: 248 250 252;    /* near-white #f8fafc */
+  --color-muted: 156 163 175;         /* slate gray with 7.5:1 contrast */
   --color-primary: 124 92 255;        /* #7c5cff */
   --color-primary-hover: 107 72 255;  /* #6b48ff */
   --color-accent: 34 211 238;         /* #22d3ee */
   --color-income: 52 211 153;         /* #34d399 */
   --color-expense: 248 113 113;       /* #f87171 */
+  color-scheme: dark;
 }
 
-/* Light theme — this is the palette that previously didn't exist at all,
-   which is why toggling "light" mode visually did nothing. */
+/* Light theme */
 .light {
-  --color-background: 247 248 250;    /* #f7f8fa */
+  --color-background: 246 248 252;    /* #f6f8fc */
   --color-surface: 255 255 255;       /* #ffffff */
-  --color-surface-hover: 241 243 246; /* #f1f3f6 */
-  --color-border: 226 229 235;        /* #e2e5eb */
-  --color-foreground: 17 20 26;       /* near-black */
-  --color-muted: 100 108 120;         /* slate gray */
-  --color-primary: 109 76 247;        /* slightly deeper purple for contrast on white */
+  --color-surface-hover: 238 242 248; /* #eef2f8 */
+  --color-border: 222 227 236;        /* #dee3ec */
+  --color-foreground: 15 23 42;       /* slate-900 #0f172a */
+  --color-muted: 75 85 99;            /* gray-600 #4b5563 with 7:1 contrast */
+  --color-primary: 109 76 247;        /* vibrant purple */
   --color-primary-hover: 91 58 235;
-  --color-accent: 8 145 178;          /* darker cyan for AA contrast on white */
+  --color-accent: 8 145 178;          /* dark cyan */
   --color-income: 5 150 105;
   --color-expense: 220 38 38;
+  color-scheme: light;
 }
 
 body {
@@ -45,11 +46,21 @@ h1, h2, h3 {
   letter-spacing: -0.02em;
 }
 
+select option {
+  background-color: rgb(var(--color-surface));
+  color: rgb(var(--color-foreground));
+}
+
+.dark input[type="date"]::-webkit-calendar-picker-indicator,
+.dark input[type="month"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-thumb { @apply bg-surfaceHover rounded-full; }
 ::-webkit-scrollbar-track { @apply bg-transparent; }
 
-/* Smooth theme transitions instead of an abrupt flash when toggling */
-* {
+/* Smooth theme transitions */
+body, div, nav, aside, header, card, table, tr, td, th, input, select, textarea, button, span, p, h1, h2, h3 {
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }

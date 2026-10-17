@@ -23,7 +23,7 @@ export function Chat() {
                 <Sparkles className="h-7 w-7 text-white" />
               </div>
               <div>
-                <h2 className="text-lg font-semibold text-white">Ask your AI financial advisor</h2>
+                <h2 className="text-lg font-semibold text-foreground">Ask your AI financial advisor</h2>
                 <p className="mt-1 text-sm text-muted">Grounded in your real transaction data — try a prompt below.</p>
               </div>
               <div className="flex flex-wrap justify-center gap-2 max-w-lg">
@@ -31,7 +31,7 @@ export function Chat() {
                   <button
                     key={prompt}
                     onClick={() => sendMessage(prompt)}
-                    className="rounded-full border border-border bg-surfaceHover px-3.5 py-2 text-xs text-white/80 hover:border-primary/50 hover:text-white transition-colors"
+                    className="rounded-full border border-border bg-surfaceHover px-3.5 py-2 text-xs text-foreground/80 hover:border-primary/50 hover:text-foreground transition-colors"
                   >
                     {prompt}
                   </button>

@@ -17,7 +17,7 @@ export function Profile() {
             <UserIcon className="h-8 w-8 text-white" />
           </div>
           <div>
-            <h2 className="text-lg font-semibold text-white">{user?.full_name || "Demo User"}</h2>
+            <h2 className="text-lg font-semibold text-foreground">{user?.full_name || "Demo User"}</h2>
             <p className="flex items-center gap-1.5 text-sm text-muted">
               <Mail className="h-3.5 w-3.5" /> {user?.email}
             </p>
@@ -28,7 +28,7 @@ export function Profile() {
           <div className="flex items-center gap-3">
             <Database className="h-5 w-5 text-primary" />
             <div>
-              <p className="text-sm font-medium text-white">Transaction Data</p>
+              <p className="text-sm font-medium text-foreground">Transaction Data</p>
               <p className="text-xs text-muted">{summary?.transaction_count ?? 0} transactions on record</p>
             </div>
           </div>

@@ -20,7 +20,7 @@ export class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-background text-center px-6">
           <AlertTriangle className="h-12 w-12 text-expense" />
-          <h1 className="text-xl font-semibold text-white">Something went wrong</h1>
+          <h1 className="text-xl font-semibold text-foreground">Something went wrong</h1>
           <p className="text-muted max-w-md">
             The dashboard hit an unexpected error. Try refreshing the page — if it persists, your data is still safe.
           </p>

@@ -20,7 +20,7 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
       </div>
       <div className={clsx(
         "max-w-[75%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap",
-        isUser ? "bg-primary text-white rounded-tr-sm" : "bg-surface border border-border text-white/90 rounded-tl-sm"
+        isUser ? "bg-primary text-white rounded-tr-sm" : "bg-surface border border-border text-foreground rounded-tl-sm"
       )}>
         {message.content || <span className="inline-flex gap-1">
           <span className="h-1.5 w-1.5 rounded-full bg-muted animate-bounce [animation-delay:-0.3s]" />

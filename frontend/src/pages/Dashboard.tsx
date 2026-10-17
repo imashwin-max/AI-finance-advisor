@@ -54,7 +54,7 @@ export function Dashboard() {
         ) : null}
 
         <Card>
-          <h2 className="mb-4 text-lg font-semibold text-white">Recent Transactions</h2>
+          <h2 className="mb-4 text-lg font-semibold text-foreground">Recent Transactions</h2>
           {txnsLoading ? (
             <div className="flex flex-col gap-3">
               {Array.from({ length: 5 }).map((_, i) => <SkeletonLoader key={i} className="h-14" />)}

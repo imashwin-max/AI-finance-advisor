@@ -55,13 +55,13 @@ export function Budgets() {
           <Card className="flex flex-wrap items-end gap-4">
             <div className="flex flex-col gap-1">
               <label className="text-xs text-muted">Category</label>
-              <select value={category} onChange={(e) => setCategory(e.target.value)} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-white outline-none">
+              <select value={category} onChange={(e) => setCategory(e.target.value)} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-foreground outline-none">
                 {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
               </select>
             </div>
             <div className="flex flex-col gap-1">
               <label className="text-xs text-muted">Month</label>
-              <input type="month" value={month} onChange={(e) => setMonth(e.target.value)} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-white outline-none" />
+              <input type="month" value={month} onChange={(e) => setMonth(e.target.value)} className="rounded-xl border border-border bg-background px-3 py-2 text-sm text-foreground outline-none" />
             </div>
             <div className="flex flex-col gap-1">
               <label className="text-xs text-muted">Limit Amount (₹)</label>
@@ -70,7 +70,7 @@ export function Budgets() {
                 value={limit}
                 onChange={(e) => setLimit(e.target.value)}
                 placeholder="10000"
-                className="w-32 rounded-xl border border-border bg-background px-3 py-2 text-sm text-white outline-none"
+                className="w-32 rounded-xl border border-border bg-background px-3 py-2 text-sm text-foreground outline-none"
               />
             </div>
             <button

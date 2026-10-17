@@ -54,7 +54,7 @@ export function Transactions() {
                   return (
                     <tr key={t.id} className="hover:bg-surfaceHover/50 transition-colors">
                       <td className="px-6 py-3 text-muted whitespace-nowrap">{formatDate(t.date)}</td>
-                      <td className="px-6 py-3 text-white">
+                      <td className="px-6 py-3 text-foreground">
                         <div className="font-medium">{t.merchant || t.description}</div>
                         <div className="text-xs text-muted">{t.description}</div>
                       </td>
